@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abda5a440b0b5634b8654ff3a0129b80, type: 3}
-  m_Name: ColyseusSettings
+  m_Name: ColyseusSettings Remote
   m_EditorClassIdentifier: 
-  colyseusServerAddress: rhhbag.us-west-1.colyseus.dev
-  colyseusServerPort: 443
+  colyseusServerAddress: leia.honda-ri.com
+  colyseusServerPort: 9443
   useSecureProtocol: 1
   _requestHeaders:
   - name: Content-Type

@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using UnityEngine;
 using Colyseus;
 using LucidSightTools;
@@ -55,6 +53,10 @@ public class MMOManager : ColyseusManager<MMOManager>
     private ColyseusRoom<ChatRoomState> _chatRoom;
 
     public bool autoConnect = false;
+
+    [Space]
+    public bool usePathPrefix = false;
+    public string requestPathPrefix;
 
     public RoomState currentRoomState;
 
@@ -379,7 +381,9 @@ public class MMOManager : ColyseusManager<MMOManager>
     /// <returns></returns>
     private IEnumerator Co_ServerRequest<T>(string method, string url, WWWForm form, Action<RequestResponse> onComplete) where T : RequestResponse
     {
-        string fullURL = $"{_colyseusSettings.WebRequestEndpoint}/{url}";
+        string fullURL = $"{_colyseusSettings.WebRequestEndpoint}{(usePathPrefix? '/' + requestPathPrefix.Trim('/') : string.Empty)}/{url}";
+
+        Debug.Log(fullURL);
 
         UnityWebRequest request = null;
 

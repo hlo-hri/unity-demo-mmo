@@ -435,7 +435,6 @@ MonoBehaviour:
   loginView: {fileID: 590255467}
   signUpView: {fileID: 901038358}
   backBtn: {fileID: 542217338}
-  rememberMe: {fileID: 1710697320}
   errorMsg: {fileID: 2007593062}
   usernameInput: {fileID: 967595653}
   emailInput: {fileID: 1876148527}
@@ -445,6 +444,7 @@ MonoBehaviour:
   logInEmailInput: {fileID: 643224742}
   logInPasswordInput: {fileID: 884528659}
   logInBtn: {fileID: 624697601}
+  rememberMe: {fileID: 1710697320}
 --- !u!1 &107188991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,6 +2254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _colyseusSettings: {fileID: 11400000, guid: 5fbf227f540d0384993aafa75df60613, type: 2}
   autoConnect: 0
+  usePathPrefix: 1
+  requestPathPrefix: colyseus
 --- !u!4 &631429329
 Transform:
   m_ObjectHideFlags: 0
